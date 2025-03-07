@@ -1,7 +1,7 @@
 
 describe('autocomplete the web form and submit', () => {
   beforeEach(() => {
-    cy.visit('/form');
+    cy.visit('https://formy-project.herokuapp.com/form');
   });
 
   it('Fills out the form and submit.', () => {
@@ -17,10 +17,9 @@ describe('autocomplete the web form and submit', () => {
     // Assert navigation to the Thank You page
     cy.url().should('include', '/thanks');
 
-    // Assert the heading text is visible
+    // Assert text is visible
     cy.get('h1').should('have.text', 'Thanks for submitting your form');
 
-    // Assert the heading text is visible
     cy.get('h1').should('have.text', 'Thanks for submitting your form');
   })
 })
